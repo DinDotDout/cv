@@ -1,138 +1,117 @@
 %! TeX root = cv.tex
-\documentclass[9pt,oneside,a4paper,titlepage]{article}
-% Formatting
-\usepackage[most]{tcolorbox}
-% exact margins
-\usepackage{geometry}
-\usepackage{hyperref}
+\documentclass[10pt]{article}       % set main text size
+\usepackage[a4paper,                % set paper size to A4. change to letterpaper for US/Canadian resumes
+top=0.4in,                          % specify top page margin
+bottom=0.4in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
 
-\geometry{
-		a4paper,
-		left=0.1mm,
-		right=0.1mm,
-		top=0.1mm,
-		bottom=0.1mm
-}
+\usepackage{helvet}                 % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
 
-\definecolor{titleBack}{RGB}{0, 51, 102}
-\date{}
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
 
-% \href{http://www.google.de}{\includegraphics[width=0.6cm]{images/LinkedIn-Logos/LI-In-Bug.png}} % [1]
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
 
-% \begin{figure}%[2]
-%     \centering
-%     \href{http://www.google.de}{\includegraphics[width=0.6cm]{images/LinkedIn-Logos/LI-In-Bug.png}}
-%     \caption{Non linked caption.}
-% \end{figure}
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
 
 \begin{document}
-\tcbset{colframe=gray!95!black,colback=titleBack,arc=0mm}
 
-\begin{tcolorbox}
-	\vspace*{0.5cm}
-	\begin{minipage}{1.0\textwidth}
-		\begin{center}
-			\Huge{\textcolor{white}{JOAN DOT SASTRE}} \\
-			\vspace*{0.5cm}
-			\Large{\textcolor{white}{Graphics programmer}}
-		\end{center}
-	\end{minipage}
-	\vspace*{0.5cm}
-\end{tcolorbox}
-\tcbset{colframe=white,colback=white,arc=0mm}
-\begin{tcolorbox}
-	\begin{minipage}[t]{8cm}
-		\vspace*{-0.5cm}
-		\begin{tcolorbox}[grow to left by=0.6cm,colback=gray!25,colframe=white,height fill]
-			\section*{Profile}
-			Game development has been a persistent interest of mine since my early years and throughout my university degree. It wasn’t until 2020 that I finally decided to embark on this journey and started
-			my first project. Since then, I’ve been voraciously consuming information related to the field and taking on new challenges, which has become one of my main hobbies.
+\centerline{\Huge Joan Dot Sastre}
 
-			I’ve been working in the game industry since
-			2021, where I’ve been actively involved in various aspects of game development. This includes not only overseeing, but also directly contributing to different sections of our projects. My hands-on experience ranges from communicating and collaborating with both the art and game design departments, to personally handling and
-			executing important parts of the projects. This
-			has allowed me to rapidly gain practical
-			experience in the field.
+\vspace{5pt}
 
-			Some of my notable interests include contributing to open source (godot engine), optimizing my development tools and operating system (currently Arch) for an efficient workflow, and practicing typing.
-			\section*{Expertise}
-			\begin{itemize}
-				\item{C++}
-				\item{Renderdoc}
-				\item{Linux and tools}
-			\end{itemize}
-			\section*{Interests}
-			Contributting to godot engine, graphics programming, learning new tools and configuring
-			my development environment.
-			\section*{Languages}
-			- Catalan: Native \\
-			- Spanish: Native \\
-			- English: Cambridge proficiency (C2)
-			\section*{Contact}
-			\begin{tabular}{l l}
-				Tel:                                                                                                                      & ********* \\
-				Email:                                                                                                                    & joandot1998@gmail.com \\
-				\href{https://www.linkedin.com/in/joan-dot-sastre-50860a198/}{\protect\includegraphics[width=0.6cm]{images/linkedin.png}} & Joan Dot Sastre       \\
-				\href{https://github.com/DinDotDout}{\protect\includegraphics[width=0.6cm]{images/github.png}}                            & DinDotDout            \\
-			\end{tabular}
-		\end{tcolorbox}
-	\end{minipage}
-	\begin{minipage}[t]{11cm}
-		\vspace*{-0.5cm}
-		% \hspace*{0.0cm}
-		\begin{tcolorbox}[grow to right by=0.75cm, colframe=white,colback=white]
-			\section*{Experience}
-			\begin{itemize}
-				\item{
-				      \textbf{Game Motion - Graphics/Overall programmer} \\
-				      \emph{2022-2023}\\
-				      \begin{itemize}
-					      \vspace*{-0.5cm}
-					      \item{Shader programming:
-					            \begin{itemize}
-						            \item{Procedural texture generation and manipulation to achieve different patterns with techniques such as SDFs (signed distance fuction) and FBM (fractal brownian motion) with noise functions  (value noise, perlin noise, voronoi noise...).}
-						            \item{Vertex folding on procedural meshes to achieve 3d look on 2d space.}
-						            \item{Screen space shaders for region masking and screen effects.}
-						            \item{Custom texture buffer writting and  backbuffer usage for different effects.}
-					            \end{itemize}
-					            }
-					      \item{Procedural terrain generation .}
-					      \item{Game otimizations (mulithreading, LOD, instanced rendering, coroutines).}
-					      \item{Game engine extensions for game prop limitless variations.}
-				      \end{itemize}
-				      }
-				      \item{
-				            \textbf{Ninju Games - Junior game programmer} \\
-				            \emph{2021-2022} \\
-				            \vspace*{-0.5cm}
-				            \begin{itemize}
-				      	      \item{Custom threaded game resource manager implementation.}
-				      	      \item{Fully parametrized procedural world generation and data structures design and implementation.}
-				      	      \item{Frontend nft market data management.}
-				      	      \item{UI controls and interactions implementation.}
-				            \end{itemize}
-				            }
-				      \item{
-				            \textbf{Ninju Games Internship} \\
-				            \emph{2021-2022} \\
-				            \vspace*{-0.5cm}
-				            \begin{itemize}
-				      	      \item{Local multiplayer implementation on top off finished single player game.}
-				            \end{itemize}
-				            }
-			\end{itemize}
-			\section*{Education}
-			\begin{itemize}
-				\item{
-				      \textbf{Degree in Computer Science} \\
-				      \emph{UIB} \\
-				      \emph{2016-2020} \\
-				      Whatever i did
-				      }
+\centerline{\href{mailto:joandot1998@gmail.com}{joandot1998@gmail.com} | \href{https://github.com/DinDotDout}{github.com/DinDotDout}}
 
-			\end{itemize}
-		\end{tcolorbox}
-	\end{minipage}
-\end{tcolorbox}
+\vspace{-10pt}
+
+\section*{Skills}
+\textbf{Coding} C++, C\#, GDScript, GLSL, Lua, Python \\
+\textbf{Tools} Renderdoc, DAP, Git, CMake \\
+\textbf{APIs} Vulkan \\
+\textbf{Languages} Spanish (native), Catalan (native), English (Cambridge C2 Proficiency)
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Experience}
+\textbf{Game Programmer,} {Game Motion} \hfill 2022 -- 2023\\
+\vspace{-9pt}
+\begin{itemize}
+	\item Implemented custom 3D features to 2D procedural meshs via shader vertex folding based
+        on camera transform and other techniques achieving a 3D look in a 2D isometric game.
+	\item Boosted performance of farthest LODs from an average of 26 fps to 60 fps using instanced rendering.
+	\item Created a system for writing specific objects to a buffer region, with
+        unique "color" identifiers. This was interpreted as a mask at the bit level,
+        enabling targeted shader effects on the corresponding objects.
+	\item Devised a system enabling artists to create limitless prop variations intuitively with
+        a single scene structure, including composition, transform manipulation and recoloring of the pieces.
+	\item Developed a 2.5D sprite-based parallax system with both horizontal and vertical
+        parallax, zoom, and camera-tilt layer adjustment.
+	\item Developed shader effects for water, clouds and ground of various types for river, biomes and background.
+
+\end{itemize}
+
+\textbf{Junior Game Programmer,}  {Ninju Games} \hfill 2021 -- 2022 \\
+\vspace{-9pt}
+\begin{itemize}
+	\item Built 2D procedural map generation system with specified biome distribution and non colliding river placement.
+	\item Created prop placement and destruction system based on GDD's specifications, achieving constant world refill and specified distribution patterns over space and time.
+	\item Implemented a custom, multi-threaded game resource manager for asynchronous tracking and management of asset loading. This system also supports caching and is capable of fetching assets from remote sources when required.
+\end{itemize}
+
+\vspace{-18.5pt}
+
+\section*{Projects}
+\textbf{Marching Cloudscapes} \hfill \href{https://github.com/DinDotDout/marching_cloudscapes}{github.com/DinDotDout/marching\_cloudscapes} \\
+\vspace{-9pt}
+\begin{itemize}
+	\item Developed a raymarcher shader for a skybox, incorporating physically based volumetric clouds, flat high altitude clouds and simulated atmospheric scattering.
+	\item Researched and tested many optimization techniques, achieving a consistent 144fps given optimal parameters.
+	\item Provided a broad range of customizable parameters and settings to simulate various cloud types.
+	\item Added artist drawable cloudscape maps for scenary building.
+	\item Explored various noise functions and their combinations for generating realistic cloud shapes.
+\end{itemize}
+
+\textbf{Godot Texture Composer} \hfill \href{https://github.com/DinDotDout/noise_texture_composer}{github.com/DinDotDout/noise\_texture\_composer} \\
+\vspace{-9pt}
+\begin{itemize}
+	\item Encountered a situation where shader performance in Godot was being hindered due to multiple texture lookups, as the inbuilt texture creation utilities were using only one channel. In response, I created a tool that combined single-channel Godot noise or gradient textures into a multi-channel texture. This resulted in single shader texture lookup, significantly optimizing shader performance.
+\end{itemize}
+
+\textbf{Neural Network for Tetris99 on Nintendo Switch} \hfill \href{https://github.com/DinDotDout/tfg_tetrisIA }{github.com/DinDotDout/tfg\_tetrisIA} \\
+\vspace{-9pt}
+\begin{itemize}
+	\item Developed a reduced replica of Tetris99 for training a neural network.
+	\item Implemented real time image processing techniques for game state extraction and noise filtering.
+	\item Used Arduino for console input, enabling the machine learning model to interact with the game environment.
+	\item Trained a neural network to play the game, achieving an average of 0.467 lines cleared per second on the console.
+\end{itemize}
+
+\textbf{DOT (Procedural Planet Game/Editor)} \hfill \href{https://github.com/DinDotDout/dot}{github.com/DinDotDout/dot} \\
+\vspace{-9pt}
+\begin{itemize}
+	\item Built interactive, non-blocking procedural planet generation in the menu.
+	\item Implemented height based shader texturing on the planet.
+	\item Added randomized non colliding prop spawn.
+	\item Created three game modes: tower defense, third person sword combat and space-ship flight and shoot.
+\end{itemize}
+
+\vspace{-18.5pt}
+
+\section*{Education}
+\textbf{\href{https://www.uib.eu/}{UIB}} -- BS in Computer Science \hfill 2020 \\
 
 \end{document}
+
