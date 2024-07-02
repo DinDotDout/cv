@@ -36,7 +36,8 @@ right=0.5in]{geometry}              % specify right page margin
 
 \vspace{-10pt}
 \section*{Summary}
-A committed graphics programmer with 2 years of professional experience and 5 years dedicated to mastering the craft. Skilled in shader programming, performance optimization, and 3D graphics. Eager to deepen my knowledge of lower-level APIs and contribute to innovative and visually stunning games. Passionate about open-source projects and refining my workflow.
+% A committed graphics programmer with 2 years of professional experience and 5 years dedicated to mastering the craft. Skilled in shader programming, performance optimization, and 3D graphics. Eager to deepen my knowledge of lower-level APIs and contribute to innovative and visually stunning games. Passionate about open-source projects and refining my workflow.
+A committed game programmer with 2 years of professional experience and 5 years dedicated to mastering the craft, having worked on the game "Continuum World" and another unreleased project. Skilled in shader programming, performance optimization, and 3D graphics. Eager to deepen my knowledge of lower-level APIs and contribute to innovative and visually stunning games. Passionate about open-source projects and refining my workflow.
 \section*{Skills}
 \textbf{Engines} Godot, Unity \\
 \textbf{Coding} C++, C\#, GDScript, GLSL, Lua, Python \\
@@ -47,49 +48,64 @@ A committed graphics programmer with 2 years of professional experience and 5 ye
 \vspace{-6.5pt}
 
 \section*{Experience}
-\textbf{Game Programmer,} {Game Motion} \hfill 2022 -- 2023\\
+\textbf{Generalist/Graphics Programmer ,} {Game Motion} \hfill 2022 -- 2023\\
 \vspace{-9pt}
 \begin{itemize}
-	\item Implemented custom 3D features to 2D procedural meshs via shader vertex folding based
-        on camera transform and other techniques achieving a 3D look in a 2D isometric game
+	\item Developed a system for a 2.5D top-down game that constructs 2D procedural meshes. These
+	      are then processed by a shader which applies color, places decals, and transforms them based on view
+	      to simulate a 3D appearance
 	\item Boosted performance of farthest LODs from an average of 26 fps to 60 fps using instanced rendering
-	\item Created a system for writing specific objects to a buffer region, with
-        unique "color" identifiers. This was interpreted as a mask at the bit level,
-        enabling targeted shader effects on the corresponding objects
-    \item Developed shaders for various elements including river water, diverse biome grounds, cloud backgrounds and VFX
-	\item Devised a system enabling artists to create limitless prop variations intuitively with
-        a single scene structure, including composition, transform manipulation and recoloring of the pieces
-    \item Developed a 2.5D sprite-based parallax system with both horizontal and vertical
-        parallax, zoom, and camera-tilt layer adjustment
-
+	\item Created a system allowing screen space targeted shader effects through a mask buffer
+	\item Developed shaders for elements including river water, different biome grounds, cloud backgrounds and game VFX
+	\item Devised a tool for artists to create animated and cohesive prop variations using sprite
+	      selection, spatial transforms, and color shift constraints. It offers instant previews
+	      for any changes, allowing for a rapid creation workflow
+	\item Developed a 2.5D parallax system using multiple billboartd sprite layers, which adjust their position and apparent distance based on camera tilt, zoom, rotation, and position
 \end{itemize}
 
-\textbf{Junior Game Programmer,}  {Ninju Games} \hfill 2021 -- 2022 \\
+\textbf{Junior Generalist Programmer,}  {Ninju Games} \hfill 2021 -- 2022 \\
 \vspace{-9pt}
 \begin{itemize}
-	\item Built 2D procedural map generation system with specified biome distribution and non colliding river placement
-	\item Created prop placement and destruction system based on GDD's specifications, achieving constant world refill and specified distribution patterns over space and time
-	\item Implemented a custom, multi-threaded game resource manager for asynchronous tracking and management of asset loading. This system also supports caching and is capable of fetching assets from remote sources when required
+	\item Worked on an unreleased project multiplayer implementation and port to Nintendo Switch
+	\item Built 2D procedural map generation tools with shape, biome distributions, river placement parameters
+	\item Created a system for prop placement and destruction, enabling world refill and spatial distribution according to GDD
+	\item Implemented a multi-threaded asset manager for tracking, loading and fetching from both local and remote sources.
 \end{itemize}
 
 \vspace{-18.5pt}
 
-\section*{Projects}
+\section*{Personal Projects}
+% \textbf{Dot Renderer} \hfill\\
+% Unreleased vulkan based renderer to test 
 \textbf{Marching Cloudscapes} \hfill \href{https://github.com/DinDotDout/marching_cloudscapes}{github.com/DinDotDout/marching\_cloudscapes} \\
-\vspace{-9pt}
-\begin{itemize}
-	\item Developed a raymarcher shader for a skybox, incorporating physically based volumetric clouds, flat high altitude clouds and simulated atmospheric scattering
-	\item Researched and tested many optimization techniques, achieving a consistent 144fps given optimal parameters
-	\item Provided a broad range of customizable parameters and settings to simulate various cloud types
-	\item Added artist drawable cloudscape maps for scenary building
-	\item Explored various noise functions and their combinations for generating realistic cloud shapes
-\end{itemize}
+% Developed a raymarcher shader for a skybox, which incorporated physically
+% based volumetric clouds, flat high altitude clouds, and simulated atmospheric scattering. My
+% research and testing of various optimization techniques resulted in a consistent 144fps given
+% optimal parameters. The project also provided a broad range of customizable parameters and
+% settings to simulate various cloud types. I added artist drawable cloudscape maps for scenery
+% building and explored various noise functions and their combinations for generating realistic cloud shapes.
 
+Developed a raymarcher shader for a skybox, incorporating volumetric clouds, 2D high altitude clouds,
+and atmospheric scattering. Optimized to achieve a consistent draw time of 7 to 8 ms per frame. Provided customizable
+parameters for various cloud types and added drawable cloudscape maps for scenery building.
+
+% \vspace{-9pt}
+% \begin{itemize}
+% \item Developed a raymarcher shader for a skybox, incorporating physically based volumetric clouds, flat high altitude clouds and simulated atmospheric scattering
+% \item Researched and tested many optimization techniques, achieving a consistent 144fps given optimal parameters
+% \item Provided a broad range of customizable parameters and settings to simulate various cloud types
+% \item Added artist drawable cloudscape maps for scenary building
+% \item Explored various noise functions and their combinations for generating realistic cloud shapes
+% \end{itemize}
+
+\vspace{5pt}
 \textbf{Godot Texture Composer} \hfill \href{https://github.com/DinDotDout/noise_texture_composer}{github.com/DinDotDout/noise\_texture\_composer} \\
-\vspace{-9pt}
-\begin{itemize}
-	\item Encountered a situation where shader performance in Godot was being hindered due to multiple texture lookups, as the inbuilt texture creation utilities were using only one channel. In response, I created a tool that combined single-channel Godot noise or gradient textures into a multi-channel texture. This resulted in single shader texture lookup, significantly optimizing shader performance
-\end{itemize}
+Developed a tool to combine single-channel Godot noise or gradient textures into a multi-channel
+texture, reducing shader texture lookups and significantly optimizing shader performance.
+% Encountered a situation where shader performance in Godot was being hindered due to multiple
+% texture lookups, as the inbuilt texture creation utilities were using only one channel. In
+% response, I created a tool that combined single-channel Godot noise or gradient textures into a
+% multi-channel texture. This resulted in single shader texture lookup, significantly optimizing shader performance
 
 % \textbf{Neural Network for Tetris99 on Nintendo Switch} \hfill \href{https://github.com/DinDotDout/tfg_tetrisIA }{github.com/DinDotDout/tfg\_tetrisIA} \\
 % \vspace{-9pt}
@@ -100,19 +116,27 @@ A committed graphics programmer with 2 years of professional experience and 5 ye
 % 	\item Trained a neural network to play the game, achieving an average of 0.467 lines cleared per second on the console
 % \end{iTemize}
 
+\vspace{5pt}
+\textbf{Apprentice Binder} \hfill \href{https://github.com/andriybyelikov/apprentice-binder}{github.com/andriybyelikov/apprentice-binder} \\
+Short 2.5D physics-based puzzle platformer card game where you use a hand of cards dealt to you to
+summon creatures and objects that help you overcome obstacles and reach the end of a set of levels.
+
+\vspace{5pt}
 \textbf{DOT (Procedural Planet Game/Editor)} \hfill \href{https://github.com/DinDotDout/dot}{github.com/DinDotDout/dot} \\
-\vspace{-9pt}
-\begin{itemize}
-	\item Built interactive, non-blocking procedural planet generation in the menu
-	\item Implemented height based shader texturing on the planet
-	\item Added randomized non colliding prop spawn
-	\item Created three game modes: tower defense, third person sword combat and space-ship flight and shoot
-\end{itemize}
-
+An interactive game featuring customizable procedural planet generation with randomized prop
+and enemy spawn. It includes four distinct biomes, variable planet sizes, and seed control.
+The game offers three distinct modes: tower defense, third-person sword combat, and space-ship flight and shoot.
+% \vspace{-9pt}
+% \begin{itemize}
+% 	\item Built interactive, non-blocking procedural planet generation in the menu
+% 	\item Implemented height based shader texturing on the planet
+% 	\item Added randomized non colliding prop spawn
+% 	\item Created three game modes: tower defense, third person sword combat and space-ship flight and shoot
+% \end{itemize}
+\vspace{5pt}
 \vspace{-18.5pt}
-
 \section*{Education}
-\textbf{\href{https://www.uib.eu/}{UIB}} -- BS in Computer Science \hfill 2020 \\
+\textbf{\href{https://www.uib.eu/}{UIB}} -- Bachelor's Degree in Computer Science \hfill 2020 \\
 
 \end{document}
 
